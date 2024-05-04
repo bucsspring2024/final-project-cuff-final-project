@@ -157,7 +157,7 @@ class CrossyRoadController:
                     self.generate_enemy()
                 self.move_enemies()
                 self.check_collisions()
-                self.check_win_condition()  # Check if the player reached the highest point
+                self.check_win_condition() 
                 self.screen.fill((255, 255, 255))  # Clear screen before drawing
                 self.draw_best_time()
                 pygame.draw.rect(self.screen, pygame.Color("blue"), self.player_controller.player)
@@ -165,10 +165,10 @@ class CrossyRoadController:
                     pygame.draw.rect(self.screen, pygame.Color("red"), enemy.rect)
             else:
                 if self.game_over:
-                    if self.player_controller.player.top <= 0:  # Check if the player won
-                        self.draw_win_screen()  # Draw the win screen
+                    if self.player_controller.player.top <= 0: 
+                        self.draw_win_screen()  
                     else:
-                        self.draw_game_over_screen()  # Draw the game over screen
+                        self.draw_game_over_screen()  
                 else:
                     self.draw_start_screen()
 

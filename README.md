@@ -33,14 +33,23 @@ My project is meant to resemble the game "Crossy Road" to an extent. The player 
 4. player wins when they reach the top of the screen, win page appears
 5. game over screen appears once you collide with enemy, and the play again option is available setting you back to the starting position
 6.  win screen displays the high score, or "best time" in which the player has finished the game. This time can also be found in the top left of the screen as you play.
+
+
+
 ### Classes
 
-- << You should have a list of each of your classes with a description-- will add once finished >>
+
+1. player_controller: This class handles the players movement in the window, using each movement(up,right,left,down) with its respective arrow key. It also initializes the players size, position, and score.
+
+2. enemy: This class handles the "enemies" or obstacles that move horizonatally across the screen and are to be avoided by the player. It also initializes the generation of these enemies' position, size, and their movement speed. 
+
+3. crossy_road_controller: This class handles the games main loop of the game itself. It takes in user inputs such as "start" and "play again" buttons. It also handles the detection of the player making contact with enemies, and will change the screen to the respective game over or winner screen depending on the games outcome. This class also handles the best score time dynamic by keeping count of the current run time, and comparing it with the overall kept best score. 
+         
+
 
 ## ATP
 
 Test Case 1: Player Movement
-
 
 a. Test Description: Verify that the player moves left, right, up, and down as expected
 b. Test Steps:
@@ -51,7 +60,6 @@ c. Expected Outcome: The player should move in the corresponding direction accor
 
 Test Case 2: Collision Detection with Enemy
 
-
 a. Test Description: Ensure that collisions between the player and enemies are detected correctly.
 b. Test Steps:
 1. press the start game button
@@ -60,8 +68,7 @@ b. Test Steps:
 c. Expected Outcome: When the player collides with an enemy, the game over screen should appear.
 
 
-**Test Case 3: Start Button/Main Menu Works
-
+Test Case 3: Start Button/Main Menu Works
 
 a. Test Description: Test the functionality of the start button or main menu.
 b. Test Steps:
@@ -71,8 +78,7 @@ b. Test Steps:
 c. Expected Outcome: Clicking on the start button should start the game.
 
 
-**Test Case 4: Player wins
-
+Test Case 4: Player wins
 
 a. Test Description: Confirm that once the player reaches the end of the level, they win and are taken to the win screen.
 b. Test Steps:
@@ -83,8 +89,7 @@ b. Test Steps:
 c. Expected Outcome: The player is taken to the win page after they reach the maximum height of the level.
 
 
-**Test Case 5:  Play Again
-
+Test Case 5:  Play Again
 
 a. Test Description: Confirm that the play again button appears when the player collides with an enemy on the game over screen, and also appears when the player wins on the win screen.
 b. Test Steps:
